@@ -17,8 +17,18 @@ class _BaseScreenState extends State<BaseScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF2D2D33),
-      body: SizedBox(
+      body: Container(
         width: double.infinity,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Colors.purple.shade700,
+              Colors.purple.shade900,
+            ],
+          ),
+        ),
         child: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
